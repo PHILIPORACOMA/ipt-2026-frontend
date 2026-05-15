@@ -13,6 +13,19 @@ import { AppComponent } from './app.component';                  // ← direct f
 import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
 
+import { environment } from '@environments/environment';
+
+const providers: any[] = [
+    { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+];
+
+if (!environment.production) {
+    // provider used to create fake backend (only in development)
+    providers.push(fakeBackendProvider);
+}
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,12 +38,7 @@ import { HomeComponent } from './home/home.component';
     AlertComponent,
     HomeComponent
   ],
-  providers: [
-    { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeBackendProvider
-  ],
+  providers: providers,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

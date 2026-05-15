@@ -115,6 +115,14 @@ The application was experiencing an issue where the "Validating token..." state 
     - Explicitly called `this.cdr.detectChanges()` after token validation and form submission state changes.
 - **Result:** The UI now updates immediately as soon as the backend response is received, resolving the hanging state.
 
+### 6. Final Project Deployment Prep
+
+The project configuration was updated to meet the requirements for the final deployment to Render:
+
+- **Environment Config:** Updated `src/environments/environment.prod.ts` with `production: true` and a placeholder `apiUrl` for the live backend.
+- **Fake Backend Toggle:** Modified `src/app/app.module.ts` to conditionally load the `fakeBackendProvider` only when `environment.production` is false. This ensures the live build connects to the real API automatically.
+- **Build Output Path:** Explicitly set the `outputPath` in `angular.json` to `dist/ipt-2026-frontend` to match the expected publish directory on Render.
+
 ---
 
 ## Features
@@ -127,25 +135,6 @@ The application was experiencing an issue where the "Validating token..." state 
   - `AuthGuard`: Protects routes based on authentication status and roles.
   - `JwtInterceptor`: Automatically attaches JWT tokens to requests.
   - `ErrorInterceptor`: Handles 401/403 errors and redirects to login.
-
-## Getting Started
-
-1. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
-
-2. **Run Development Server:**
-   ```bash
-   npm start
-   ```
-   The app will open at `http://localhost:4200/`.
-
-3. **Build for Production:**
-   ```bash
-   npm run build
-   ```
-   The output will be in the `dist/angular-21-boilerplate` directory.
 
 ## Testing
 
