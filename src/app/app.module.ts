@@ -21,10 +21,7 @@ const providers: any[] = [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
 ];
 
-if (!environment.production) {
-    // provider used to create fake backend (only in development)
-    providers.push(fakeBackendProvider);
-}
+
 
 @NgModule({
   imports: [
