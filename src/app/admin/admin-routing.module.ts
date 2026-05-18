@@ -9,6 +9,7 @@ const accountsModule = () => import('./accounts/accounts.module').then(x => x.Ac
 
 const routes: Routes = [
     { path: '', component: SubNavComponent, outlet: 'subnav' },
+    { path: 'accounts', component: SubNavComponent, outlet: 'subnav' },
     {
         path: '', component: LayoutComponent,
         children: [

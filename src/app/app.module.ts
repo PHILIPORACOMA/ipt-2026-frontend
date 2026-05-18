@@ -10,7 +10,7 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { appInitializer } from './_helpers/app.initializer';
 import { AccountService } from './_services/account.service';
 import { AppComponent } from './app.component';                  // ← direct file
-import { AlertComponent } from './_components/alert.component';
+import { AlertComponent } from './_components/alert.component'; 
 import { HomeComponent } from './home/home.component';
 
 import { environment } from '@environments/environment';
