@@ -43,3 +43,8 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
+# Config and Secrets
+.env
+config.json
+*.pem
+
