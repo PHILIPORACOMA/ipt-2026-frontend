@@ -45,6 +45,5 @@ Thumbs.db
 
 # Config and Secrets
 .env
-config.json
 *.pem
 
