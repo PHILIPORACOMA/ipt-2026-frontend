@@ -4,9 +4,9 @@ A comprehensive full-stack authentication system (Angular 21 + Node.js/MySQL) fe
 
 ## 🚀 Live Demo & Documentation
 
-- **Live Frontend:** [https://your-frontend-name.onrender.com](https://your-frontend-name.onrender.com)
-- **Live Backend API:** [https://your-backend-name.onrender.com](https://your-backend-name.onrender.com)
-- **Swagger API Docs:** [https://your-backend-name.onrender.com/api-docs](https://your-backend-name.onrender.com/api-docs)
+- **Live Frontend:** [https://ipt-2026-frontend-eta.vercel.app](https://your-frontend-name.onrender.com)
+- **Live Backend API:** [https://node-mysql-api-yes5.onrender.com](https://your-backend-name.onrender.com)
+- **Swagger API Docs:** [https://node-mysql-api-yes5.onrender.com/api-docs](https://your-backend-name.onrender.com/api-docs)
 
 ---
 
